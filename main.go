@@ -111,14 +111,13 @@ func main() {
 // logRequest 是一个中间件，用于记录请求信息
 func logRequest() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		// 获取请求的域名
-		domain := c.Request.Host
-
 		// 记录请求信息，包括域名
-		log.Infof("请求路径: %s, 请求方法: %s, 客户端IP: %s, 域名: %s", c.Request.URL.Path, c.Request.Method, c.ClientIP(), domain)
+		log.Infof("IP: %s, Url: %s",c.ClientIP(), c.Request.Referer())
 		c.Next() // 处理请求
 	}
 }
+
+
 
 
 func handleRequest(c *gin.Context) {
