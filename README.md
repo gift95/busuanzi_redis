@@ -2,7 +2,7 @@
 
 基于Redis的简单不蒜子网页计数器服务端
 
-原作者 https://github.com/rlruoli/busuanzi/tree/main
+原作者 https://github.com/rlruoli/busuanzi.git
 
 
 ## 使用方法
